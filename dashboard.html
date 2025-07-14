@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar slide-left">
+      <h2>Student Portal</h2>
+      <nav>
+        <a href="profile.html">Profile</a>
+        <a href="event.html">Events</a>
+        <a href="result.html">Results</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="home.html">Home</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <h1 class="fade-in">Welcome Back!</h1>
+        <p class="fade-in">Here is your current academic overview.</p>
+      </header>
+
+      <!-- Attendance Table -->
+      <div class="table-card slide-up">
+        <h3>📊 Attendance</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Course</th>
+              <th>Type</th>
+              <th>Present/Total</th>
+              <th>Percentage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>OOP</td><td>Lecture</td><td>4/5</td><td>80%</td></tr>
+            <tr><td>FDSA</td><td>Lab</td><td>2/3</td><td>66%</td></tr>
+            <tr><td>WDF</td><td>Lab</td><td>3/3</td><td>100%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Results Table -->
+      <div class="table-card slide-up">
+        <h3>📝 Results</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Course Name</th>
+              <th>Course Type</th>
+              <th>Credit</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>CCP</td><td>THEORY</td><td>5.00</td><td>A</td></tr>
+            <tr><td>BEEE</td><td>THEORY</td><td>4.00</td><td>A</td></tr>
+            <tr><td>MATHS</td><td>THEORY</td><td>4.00</td><td>A+</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Time Table -->
+      <div class="table-card slide-up">
+        <h3>🗓️ Time Table</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Time</th>
+              <th>Faculty</th>
+              <th>Course</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Mon</td><td>9:10-10:10</td><td>RONAKKUMAR P</td><td>OOP</td></tr>
+            <tr><td>Wed</td><td>10:10-11:10</td><td>SARITA T</td><td>FDSA</td></tr>
+            <tr><td>Fri</td><td>12:10-2:10</td><td>DEEPKUMAR P</td><td>WDF LAB</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #6a85b6, #bac8e0); /* Light variant of login */
+  color: #fff;
+  min-height: 100vh;
+  padding: 30px 20px;
+  animation: fadeSlide 1s ease-in;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  text-decoration: underline;
+  color: #e0e0ff;
+}
+
+.event-container {
+  display: grid;
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.event-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease;
+  color: #fff;
+}
+
+.event-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.event-card h2 {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  color: #ffe;
+}
+
+.event-card p {
+  margin-bottom: 8px;
+  color: #f2f2f2;
+}
+
+.event-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #7b4397, #dc2430); /* Unique button gradient */
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.event-btn:hover {
+  background: linear-gradient(to right, #5a2a7a, #b01d24);
+  transform: scale(1.05);
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 1s ease 0.5s forwards;
+  opacity: 0;
+}
+
+.zoom-in {
+  animation: zoomIn 1s ease 1s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(60px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .event-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) {
+  .event-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

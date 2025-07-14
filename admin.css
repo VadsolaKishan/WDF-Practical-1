@@ -1,0 +1,132 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b); /* Different from login */
+  color: #fff;
+  min-height: 100vh;
+  padding: 30px 20px;
+  animation: fadeInBody 1s ease;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  animation: flipIn 1s ease;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ffe;
+  text-decoration: underline;
+}
+
+/* Admin Cards */
+.admin-container {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.admin-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease;
+  opacity: 0;
+  transform: translateY(60px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.admin-card.delay-1 { animation-delay: 0.3s; }
+.admin-card.delay-2 { animation-delay: 0.6s; }
+
+.admin-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.admin-card h2 {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.admin-card p {
+  margin-bottom: 15px;
+  color: #eee;
+}
+
+.admin-btn {
+  padding: 10px 20px;
+  background: linear-gradient(to right, #654ea3, #eaafc8);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.admin-btn:hover {
+  background: linear-gradient(to right, #503a9c, #d37fa2);
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+}
+
+/* Animations */
+@keyframes fadeInBody {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes flipIn {
+  from {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .admin-btn {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+}
